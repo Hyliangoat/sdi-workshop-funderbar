@@ -20,16 +20,16 @@
       }
       it('TEST ONLY: Access object values using bracket notation ', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
-        expect(FILL_ME_IN).to.eql('Tommy');
-        expect(FILL_ME_IN).to.eql('Oliver');
-        expect(FILL_ME_IN).to.eql(16);
+        expect(obj['firstName']).to.eql('Tommy');
+        expect(obj['lastName']).to.eql('Oliver');
+        expect(obj['age']).to.eql(16);
       });
 
       it('TEST ONLY: Access object values using dot notation ', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
-        expect(FILL_ME_IN).to.eql('Dragon');
-        expect(FILL_ME_IN).to.eql('Green');
-        expect(FILL_ME_IN).to.eql(true);
+        expect(obj.zord).to.eql('Dragon');
+        expect(obj.suit).to.eql('Green');
+        expect(obj.inHighSchool).to.eql(true);
       });
 
     });
@@ -42,9 +42,9 @@
       let obj = _.objectCreationBracket(firstName,lastName,zord);
       it('Create an object using bracket notation', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
-        expect(obj[FILL_ME_IN]).to.eql('Tommy');
-        expect(obj[FILL_ME_IN]).to.eql('Oliver');
-        expect(obj[FILL_ME_IN]).to.eql('Dragon');
+        expect(obj['firstName']).to.eql('Tommy');
+        expect(obj['lastName']).to.eql('Oliver');
+        expect(obj['zord']).to.eql('Dragon');
       });
 
     });
@@ -57,9 +57,9 @@
       let obj = _.objectCreationDot(firstName,lastName,zord);
       it('Create an object using dot notation', function() {
         //Use dot notation for the FILL_ME_IN portion. 
-        expect(obj.FILL_ME_IN).to.eql('Tommy');
-        expect(obj.FILL_ME_IN).to.eql('Oliver');
-        expect(obj.FILL_ME_IN).to.eql('Dragon');
+        expect(obj.firstName).to.eql('Tommy');
+        expect(obj.lastName).to.eql('Oliver');
+        expect(obj.zord).to.eql('Dragon');
       });
 
     });
@@ -87,15 +87,16 @@
         suit : 'Pink'},
       ]
       it('TEST ONLY: Access the value needed to pass the test', function(){
-        expect(FILL_ME_IN).to.eql({firstName : 'Billy',lastName : 'Cranston',
+        expect(rangers[3]).to.eql({firstName : 'Billy',lastName : 'Cranston',
         suit : 'Blue'});
-        expect(rangers[4]).to.eql(FILL_ME_IN);
-        expect(rangers[0].firstName).to.eql(FILL_ME_IN);
-        expect(FILL_ME_IN).to.eql('Black');
-        expect(rangers[2].lastName).to.eql(FILL_ME_IN);
-        expect(FILL_ME_IN).to.eql('Red');
-        expect(rangers[5].lastName).to.eql(FILL_ME_IN);
-        expect(FILL_ME_IN).to.eql('Billy');
+        expect(rangers[4]).to.eql({firstName : 'Zack',lastName : 'Taylor',
+        suit : 'Black'});
+        expect(rangers[0].firstName).to.eql('Tommy');
+        expect(rangers[4].suit).to.eql('Black');
+        expect(rangers[2].lastName).to.eql('Kwan');
+        expect(rangers[1].suit).to.eql('Red');
+        expect(rangers[5].lastName).to.eql('Ann Hart');
+        expect(rangers[3].firstName).to.eql('Billy');
       });
     });
 
@@ -122,24 +123,24 @@
       }
       it('TEST ONLY: Access the value needed to pass the test', function(){
         //Use dot notation
-        expect(FILL_ME_IN).to.eql({firstName : 'Zack',
+        expect(rangers.black).to.eql({firstName : 'Zack',
         lastName : 'Taylor',
         zord : 'Mastodon'});
         //Use bracket notation
-        expect(FILL_ME_IN).to.eql({firstName : 'Jason',
+        expect(rangers.red).to.eql({firstName : 'Jason',
         lastName : 'Lee',
         zord : 'Tyrannosaurus'});
         //Use dot notation
-        expect(FILL_ME_IN).to.eql('Trini');
-        expect(FILL_ME_IN).to.eql('Dragon');
-        expect(FILL_ME_IN).to.eql('Cranston');
+        expect(rangers.yellow.firstName).to.eql('Trini');
+        expect(rangers.green.zord).to.eql('Dragon');
+        expect(rangers.blue.lastName).to.eql('Cranston');
         //Use bracket notation
-        expect(FILL_ME_IN).to.eql('Ann Hart');
-        expect(FILL_ME_IN).to.eql('Tyrannosaurus');
-        expect(FILL_ME_IN).to.eql('Zack');
+        expect(rangers.pink.lastName).to.eql('Ann Hart');
+        expect(rangers.red.zord).to.eql('Tyrannosaurus');
+        expect(rangers.black.firstName).to.eql('Zack');
         //Use a combination of dot and bracket notation to pass each test
-        expect(FILL_ME_IN).to.eql('Oliver');
-        expect(FILL_ME_IN).to.eql('Sabertooth Tiger');
+        expect(rangers.green.lastName).to.eql('Oliver');
+        expect(rangers.yellow.zord).to.eql('Sabertooth Tiger');
       });
     });
 
