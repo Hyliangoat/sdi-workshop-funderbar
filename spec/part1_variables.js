@@ -18,10 +18,10 @@
     describe('dataType', function() {
 
       it('should return the data type of the value passed into it', function() {
-        expect(_.dataType(1)).to.eql(FILL_ME_IN);
-        expect(_.dataType(false)).to.eql(FILL_ME_IN);
-        expect(_.dataType('Data Type')).to.equal(FILL_ME_IN);
-        expect(_.dataType(undefined)).to.equal(FILL_ME_IN);
+        expect(_.dataType(1)).to.eql('number');
+        expect(_.dataType(false)).to.eql('boolean');
+        expect(_.dataType('Data Type')).to.equal('string');
+        expect(_.dataType(undefined)).to.equal('undefined');
       });
     });
 
@@ -30,7 +30,7 @@
       it('should return sum of the two numbers passed into it', function() {
         expect(_.sum(1,1)).to.eql(2);
         expect(_.sum(33, 150)).to.eql(183);
-        expect(_.sum(10,-5)).to.eql(FILL_ME_IN);
+        expect(_.sum(10,-5)).to.eql(5);
       });
     });
 
