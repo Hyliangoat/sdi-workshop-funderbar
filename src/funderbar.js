@@ -260,8 +260,19 @@ _.falsyOrTruthy = function(a){
     }
 
     _.objectValue = (a,b) => {
-      //Code Goes Below
-      
+      let green = {
+        firstName : 'Tommy',
+        lastName : 'Oliver',
+        zordord : 'Dragon'
+      };
+
+      let red = {
+      firstName : 'Jason',
+      lastName : 'Lee',
+      zord : 'Tyrannosaurus'
+      }
+
+      return a[b];
     }
     
 
@@ -272,22 +283,39 @@ _.falsyOrTruthy = function(a){
 
     //Loop through the given array and return the total sum of all the numbers in the array. 
     _.forOf = (a) => {
-      //Code Goes Below
+      let total = 0;
+      for(let item of a){
+        if(typeof(item) === 'number'){
+          total += item;
+        }
+      }
       
+      return total;
     }
 
     //Loop through the given object and return an array of keys from the object. 
     //Note: to add values to an array use .push();
     //example array.push(value)
     _.forInKeys = (a) =>{
-      //Code Goes Below
+      let rangerArray = [];
+
+      for(let item in a){
+        rangerArray.push(item);
+      }
+
+      return rangerArray
       
     }
 
     //Loop through the given object and return an array of values from the object. 
     //This is similar to the above function but needs a little digging to get the value. 
     _.forInValues = (a) =>{
-      //Code Goes Below
+      let rangerArray = [];
+
+      for(let object in a){
+        rangerArray.push(a[object]);
+      }
+      return rangerArray;
       
     }
 }());
